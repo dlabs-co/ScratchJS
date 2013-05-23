@@ -8,6 +8,7 @@ build web applications that send data to scratch.
 Basically, you install ExternalExec, and, in your web app, you do this:
 
 ::
+
     function updateSensor(name, vale){
         var evt = document.createEvent("CustomEvent");
         evt.initCustomEvent(
@@ -36,6 +37,7 @@ scratchGenercSensor, make the user running scratch to install and the extension
 and there you have it!
 
 ::
+
     ScratchSensors.setup('<path_to_this_folder>/ScratchGenericSensor.py');
     ScratchSensors.update('foo', 'bar');
     ScratchSensors.update('bar', 'baz');

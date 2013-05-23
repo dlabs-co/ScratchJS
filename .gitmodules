@@ -1,0 +1,3 @@
+[submodule "Connector/Chrome-ExternalExec"]
+	path = Connector/Chrome-ExternalExec
+	url = https://github.com/XayOn/Chrome-ExternalExec

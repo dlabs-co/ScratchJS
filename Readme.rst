@@ -53,6 +53,7 @@ Detailed install instructions
 First, remember to recursively checkout the git.
 
 ::
+
     git submodule init
     git submodule update --recursive
 

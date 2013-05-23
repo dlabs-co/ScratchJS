@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang=en>
+    <head>
+        <title>Sample page</title>
+        <script src="ScratchSensors.js"></script>
+        <script>
+            ScratchSensors.setup('/home/xayon/devel/Dlabs/Scratch/ScratchGenericSensor.py');
+            function setup(){
+                [].forEach.call(
+                    document.getElementsByClassName('sensor'),
+                    function(){
+                        console.log(this);
+                        this.onchange = function(that) {
+                            f = that.target;
+                            ScratchSensors.update(f.id, f.value);
+                        }
+                });
+            }
+        </script>
+        <meta name="Generator" content="Vim/7.3">
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta name="plugin-version" content="vim7.3_v10">
+    </head>
+
+    <body onload="setup()">
+        <form onsubmit="return false" action="#">
+            <fieldset>
+                <legend> Estos datos se actualizaran en scratch </legend><br/>
+                <label for="numero">Numero: </label>
+                <input type="number" class="sensor" id="numero"/><br/>
+                <label for="nota">Nota: </label>
+                <input type="text" class="sensor" id="nota"/><br/>
+            </fieldset>
+        </form>
+    </body>
+</html>
